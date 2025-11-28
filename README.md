@@ -62,16 +62,27 @@ A comprehensive camera card for Home Assistant - **Optimized for performance** w
 
 ### Via HACS (Recommended)
 
-1. Open HACS in Home Assistant
-2. Go to **Frontend** > **Explore & Add Integrations**
-3. Search for **Advanced Camera Card**
-4. Click **Download this repository with HACS**
+**Option 1: Add Custom Repository**
 
-Or use the button below:
+1. Open HACS in Home Assistant
+2. Go to **Frontend** > **Three dots menu (⋮)** > **Custom repositories**
+3. Add repository with:
+   - **Repository**: `ngoviet/camera-card`
+   - **Category**: `Frontend` (Lovelace)
+4. Click **Add**
+5. Go back to **Frontend** and search for **Advanced Camera Card**
+6. Click **Download**
+
+**Option 2: Use HACS Button**
 
 <a href="https://my.home-assistant.io/redirect/hacs_repository/?owner=ngoviet&repository=camera-card&category=frontend" target="_blank">
   <img src="https://my.home-assistant.io/badges/hacs_repository.svg" alt="Open this repository in HACS" style="height: 24px;">
 </a>
+
+**Note**: If you get "Repository not found" error, make sure:
+- Repository is public on GitHub
+- You have at least one release/tag (v0.1.0 or later)
+- You're using the correct repository name: `ngoviet/camera-card`
 
 ### Manual Installation
 
