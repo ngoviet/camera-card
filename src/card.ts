@@ -458,6 +458,21 @@ class AdvancedCameraCard extends LitElement {
     // Lovelace card size is expressed in units of 50px. A 16:9 aspect-ratio
     // camera will likely render as a 276.75px height masonary card => 5.52
     // units of 50, round up to 6.
+    
+    // Optimized: Try to estimate based on config if available
+    const config = this._config;
+    if (config?.view?.layout) {
+      // Grid layout typically needs more space
+      if (config.view.layout === 'grid') {
+        return 8;
+      }
+      // Gallery layout may need more vertical space
+      if (config.view.layout === 'gallery') {
+        return 7;
+      }
+    }
+    
+    // Default: 16:9 aspect ratio camera estimate
     return 6;
   }
 }

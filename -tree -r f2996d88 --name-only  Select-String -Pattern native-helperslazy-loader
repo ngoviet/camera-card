@@ -1,0 +1,29 @@
+[33mcommit f2996d882454878f74a27c7b66c7032536d8c156[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: ngoviet <ngoviet@users.noreply.github.com>
+Date:   Fri Nov 28 19:44:59 2025 +0700
+
+    Optimize camera card: lazy load timeline, replace lodash functions, remove moment dependency
+    
+    - Implement lazy loading for vis-timeline and vis-data (reduces initial bundle size)
+    - Replace lodash functions with native JavaScript helpers (isEqual, cloneDeep, clamp, round, uniq)
+    - Remove unused moment dependency
+    - Add HACS repository button and Buy Me A Coffee link to README
+    - Optimize bundle size and load performance for Home Assistant
+
+README.md
+camera-card.code-workspace
+package.json
+rollup.config.js
+src/card-controller/actions/actions/ptz-digital.ts
+src/card-controller/templates/index.ts
+src/components-lib/timeline/controller.ts
+src/components-lib/timeline/lazy-loader.ts
+src/components-lib/timeline/source.ts
+src/components-lib/timeline/types.ts
+src/components-lib/zoom/zoom-controller.ts
+src/components/timeline-core.ts
+src/utils/basic.ts
+src/utils/embla/carousel-controller.ts
+src/utils/native-helpers.ts
+src/view/query.ts
+yarn.lock

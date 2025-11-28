@@ -1,0 +1,30 @@
+[33mcommit f2996d882454878f74a27c7b66c7032536d8c156[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: ngoviet <ngoviet@users.noreply.github.com>
+Date:   Fri Nov 28 19:44:59 2025 +0700
+
+    Optimize camera card: lazy load timeline, replace lodash functions, remove moment dependency
+    
+    - Implement lazy loading for vis-timeline and vis-data (reduces initial bundle size)
+    - Replace lodash functions with native JavaScript helpers (isEqual, cloneDeep, clamp, round, uniq)
+    - Remove unused moment dependency
+    - Add HACS repository button and Buy Me A Coffee link to README
+    - Optimize bundle size and load performance for Home Assistant
+
+ README.md                                          |    17 [32m+[m[31m-[m
+ camera-card.code-workspace                         |     8 [32m+[m
+ package.json                                       |     1 [31m-[m
+ rollup.config.js                                   |     2 [32m+[m[31m-[m
+ src/card-controller/actions/actions/ptz-digital.ts |     2 [32m+[m[31m-[m
+ src/card-controller/templates/index.ts             |     6 [32m+[m[31m-[m
+ src/components-lib/timeline/controller.ts          |    27 [32m+[m[31m-[m
+ src/components-lib/timeline/lazy-loader.ts         |    53 [32m+[m
+ src/components-lib/timeline/source.ts              |    42 [32m+[m[31m-[m
+ src/components-lib/timeline/types.ts               |     2 [32m+[m[31m-[m
+ src/components-lib/zoom/zoom-controller.ts         |     3 [32m+[m[31m-[m
+ src/components/timeline-core.ts                    |    13 [32m+[m[31m-[m
+ src/utils/basic.ts                                 |     3 [32m+[m[31m-[m
+ src/utils/embla/carousel-controller.ts             |     4 [32m+[m[31m-[m
+ src/utils/native-helpers.ts                        |   150 [32m+[m
+ src/view/query.ts                                  |     8 [32m+[m[31m-[m
+ yarn.lock                                          | 21392 [32m++++++++[m[31m-----------[m
+ 17 files changed, 9458 insertions(+), 12275 deletions(-)

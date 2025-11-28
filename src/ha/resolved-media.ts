@@ -8,7 +8,9 @@ import { homeAssistantWSRequest } from './ws-request';
 // items in the same query (which would result in only partial results being
 // returned to the user).
 // Note: Each entry is about 400 bytes.
-const RESOLVED_MEDIA_CACHE_SIZE = 1000;
+// Optimized: Reduced from 1000 to 800 to balance memory usage and cache hit rate
+// for typical Home Assistant setups (800 entries = ~320KB memory)
+const RESOLVED_MEDIA_CACHE_SIZE = 800;
 
 export class ResolvedMediaCache extends LRUCache<string, ResolvedMedia> {
   constructor() {

@@ -37,10 +37,17 @@ export class StateWatcher implements StateWatcherSubscriptionInterface {
     if (!entityIDs.length) {
       return false;
     }
+    
+    // Optimized: Remove duplicates to avoid unnecessary processing
+    const uniqueEntityIDs = Array.from(new Set(entityIDs));
+    
     if (this._watcherCallbacks.has(callback)) {
-      this._watcherCallbacks.get(callback)?.push(...entityIDs);
+      const existing = this._watcherCallbacks.get(callback) ?? [];
+      // Merge and deduplicate
+      const merged = Array.from(new Set([...existing, ...uniqueEntityIDs]));
+      this._watcherCallbacks.set(callback, merged);
     } else {
-      this._watcherCallbacks.set(callback, entityIDs);
+      this._watcherCallbacks.set(callback, uniqueEntityIDs);
     }
     return true;
   }
