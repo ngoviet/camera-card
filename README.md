@@ -93,38 +93,44 @@ A comprehensive camera card for Home Assistant - **Optimized for performance** w
 
 **Troubleshooting**: If you get "Repository not found" error:
 
-### Step-by-step solution:
+### Common Solutions:
 
-1. **Verify repository exists and is public**:
-   - Check: https://github.com/ngoviet/camera-card-ha
-   - Ensure repository is **Public** (not Private)
+1. **Repository is Public** ✅
+   - Verified: https://github.com/ngoviet/camera-card-ha is public
 
-2. **Wait for HACS indexing** (5-10 minutes):
+2. **Wait for HACS indexing** (5-30 minutes):
    - HACS needs time to index new repositories
-   - Try again after waiting a few minutes
+   - This is the most common cause - **please wait 10-30 minutes** after repository creation
+   - HACS indexes repositories periodically, not instantly
 
 3. **Clear HACS cache**:
    - In Home Assistant: **HACS** → **Settings** (⚙️ icon)
    - Click **Clear HACS cache**
    - Restart Home Assistant if needed
 
-4. **Manual repository add**:
+4. **Manual repository add** (Recommended if button doesn't work):
    - In HACS: **Frontend** → **Three dots (⋮)** → **Custom repositories**
    - Click **+ ADD**
-   - **Repository**: `https://github.com/ngoviet/camera-card-ha`
+   - **Repository**: `ngoviet/camera-card-ha` (or full URL: `https://github.com/ngoviet/camera-card-ha`)
    - **Category**: `Frontend` (Lovelace)
    - Click **Add**
    - Wait a moment, then go to **Frontend** and search for **Advanced Camera Card**
 
-5. **Verify release exists**:
-   - Check: https://github.com/ngoviet/camera-card-ha/releases
-   - Ensure at least one release (v0.1.0) exists with assets
+5. **Verify HACS requirements**:
+   - Ensure HACS is updated to latest version
+   - Check: https://github.com/ngoviet/camera-card-ha/releases for available releases
+   - Repository has valid `hacs.json` file ✅
 
 6. **Check HACS logs**:
    - In Home Assistant: **Developer Tools** → **Logs**
    - Look for HACS-related errors
+   - Common error: "Repository not found" usually means HACS hasn't indexed it yet
 
-**Note**: Repository name must be exactly `ngoviet/camera-card-ha`
+**Important Notes**:
+- Repository name must be exactly `ngoviet/camera-card-ha`
+- If the button doesn't work, use **Option 1** (Manual repository add) - it's more reliable
+- New repositories typically take 10-30 minutes to appear in HACS
+- The repository is public and has all required files ✅
 
 ### Manual Installation
 
