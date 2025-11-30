@@ -30,8 +30,11 @@ jobs:
       - name: Remove yarn.lock and create empty one
         run: rm -f yarn.lock && touch yarn.lock
 
-      - name: Install dependencies
+      - name: Install dependencies (update lockfile)
         run: yarn install --mode=update-lockfile
+
+      - name: Install dependencies (link packages)
+        run: yarn install
 
       - name: Build the files
         run: yarn run build
