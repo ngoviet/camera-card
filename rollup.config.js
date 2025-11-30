@@ -49,6 +49,7 @@ const plugins = [
     exclude: ['dist/**', 'tests/**/*.test.ts'],
     tsconfig: 'tsconfig.json',
     resolveJsonModule: true,
+    filterRoot: process.cwd(),
   }),
   nodeResolve({
     browser: true,
