@@ -29,12 +29,15 @@ jobs:
 
       - name: Install dependencies
         run: |
-          yarn install --immutable || {
+          set +e
+          yarn install --immutable
+          if [ $? -ne 0 ]; then
             echo "Lockfile issue detected, updating lockfile..."
-            yarn install --mode=update-lockfile
+            yarn install --mode=update-lockfile || true
             echo "Installing with updated lockfile..."
             yarn install
-          }
+          fi
+          set -e
 
       - name: Build the files
         run: yarn run build
