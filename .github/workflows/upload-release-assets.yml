@@ -28,7 +28,11 @@ jobs:
         uses: volta-cli/action@v4
 
       - name: Install dependencies
-        run: yarn install --immutable || (yarn install && echo "Lockfile updated, but continuing...")
+        run: |
+          yarn install --immutable || {
+            echo "Lockfile issue detected, trying without --immutable..."
+            yarn install
+          }
 
       - name: Build the files
         run: yarn run build
