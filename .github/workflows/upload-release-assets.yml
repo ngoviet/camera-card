@@ -28,7 +28,7 @@ jobs:
         uses: volta-cli/action@v4
 
       - name: Install dependencies
-        run: yarn install --check-cache
+        run: yarn install --mode=skip-build
 
       - name: Build the files
         run: yarn run build
