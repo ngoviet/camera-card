@@ -1,4 +1,4 @@
-import { uniq } from '../../utils/basic.js';
+import { uniq } from '../../utils/basic';
 import { ActionsExecutor } from '../../card-controller/actions/types';
 import { StateWatcherSubscriptionInterface } from '../../card-controller/hass/state-watcher';
 import { PTZAction, PTZActionPhase } from '../../config/schema/actions/custom/ptz';
