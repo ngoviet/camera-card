@@ -1,7 +1,7 @@
 import Panzoom, { PanzoomEventDetail, PanzoomObject } from '@dermotduffy/panzoom';
 import { throttle } from 'lodash-es';
 import { arefloatsApproximatelyEqual, isHoverableDevice } from '../../utils/basic';
-import { round } from '../../utils/native-helpers';
+import { round } from '../../utils/basic';
 import { fireAdvancedCameraCardEvent } from '../../utils/fire-advanced-camera-card-event';
 import {
   PartialZoomSettings,

@@ -4,7 +4,7 @@ import { CreatePluginType, LoosePluginType } from 'embla-carousel/components/Plu
 import { TransitionEffect } from '../../config/schema/common/transition-effect.js';
 import { getChildrenFromElement } from '../basic.js';
 import { fireAdvancedCameraCardEvent } from '../fire-advanced-camera-card-event';
-import { deepEqual } from '../native-helpers';
+import { deepEqual } from './basic';
 import { TextDirection } from '../text-direction';
 
 export interface CarouselSelected {

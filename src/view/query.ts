@@ -1,6 +1,6 @@
 import { EventQuery, MediaQuery, RecordingQuery } from '../camera-manager/types.js';
 import { FolderQuery } from '../card-controller/folders/types.js';
-import { deepClone, deepEqual, uniqWith } from '../utils/native-helpers';
+import { deepClone, deepEqual, uniqWith } from '../utils/basic';
 import { setify } from '../utils/basic.js';
 
 export type MediaQueries = EventMediaQuery | RecordingMediaQuery;

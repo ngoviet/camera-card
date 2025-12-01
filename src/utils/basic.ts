@@ -9,6 +9,9 @@ import { isEqualWith, mergeWith } from 'lodash-es';
 import { round, uniq } from './native-helpers';
 import { AdvancedCameraCardError } from '../types';
 
+// Re-export native-helpers functions for easier imports from other directories
+export * from './native-helpers';
+
 export type ModifyInterface<T, R> = Omit<T, keyof R> & R;
 
 /**
