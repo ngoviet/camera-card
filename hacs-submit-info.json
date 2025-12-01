@@ -1,0 +1,6 @@
+{
+  "description": "A comprehensive camera card for Home Assistant with advanced features",
+  "repository": "ngoviet/camera-card-ha",
+  "name": "Advanced Camera Card",
+  "category": "plugin"
+}
