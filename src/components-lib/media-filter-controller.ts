@@ -12,7 +12,6 @@ import {
 } from 'date-fns';
 import { LitElement } from 'lit';
 import { isEqual, orderBy } from 'lodash-es';
-import { uniqWith } from '../../utils/basic';
 import { CameraManager } from '../camera-manager/manager';
 import { DateRange, PartialDateRange } from '../camera-manager/range';
 import { CameraQuery, MediaMetadata, QueryType } from '../camera-manager/types';
@@ -20,7 +19,7 @@ import { ViewManagerInterface } from '../card-controller/view/types';
 import { SelectOption, SelectValues } from '../components/select';
 import { CardWideConfig } from '../config/schema/types';
 import { localize } from '../localize/localize';
-import { errorToConsole, formatDate, prettifyTitle } from '../utils/basic';
+import { errorToConsole, formatDate, prettifyTitle, uniqWith } from '../utils/basic';
 import { EventMediaQuery, RecordingMediaQuery } from '../view/query';
 import { QueryClassifier } from '../view/query-classifier';
 
