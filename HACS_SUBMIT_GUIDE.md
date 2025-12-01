@@ -1,5 +1,8 @@
 # Hướng dẫn Submit Repository vào HACS Default
 
+> **Lưu ý**: Hướng dẫn này chỉ dành cho **plugin** (Frontend/Lovelace cards).  
+> Đối với **integrations** (như `lumentreeHA`, `smartsolar-ha`), HACS thường tự động nhận diện dễ hơn và không cần submit vào default list.
+
 ## Thông tin Repository
 
 - **Repository**: `ngoviet/camera-card-ha`
