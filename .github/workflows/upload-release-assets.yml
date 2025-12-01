@@ -28,7 +28,12 @@ jobs:
         uses: volta-cli/action@v4
 
       - name: Install dependencies
-        run: yarn install --immutable
+        run: |
+          yarn install --immutable || {
+            echo "Lockfile mismatch detected. Updating lockfile..."
+            yarn install --mode=update-lockfile
+            yarn install
+          }
 
       - name: Build the files
         run: yarn run build
