@@ -43,17 +43,18 @@ const plugins = [
   }),
   svgo(),
   image({ exclude: '**/*.svg' }),
+  nodeResolve({
+    browser: true,
+    preferBuiltins: false,
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    rootDir: process.cwd(),
+  }),
   typescript({
     sourceMap: dev,
     inlineSources: dev,
     exclude: ['dist/**', 'tests/**/*.test.ts'],
     tsconfig: 'tsconfig.json',
     resolveJsonModule: true,
-  }),
-  nodeResolve({
-    browser: true,
-    preferBuiltins: false,
-    extensions: ['.js', '.jsx', '.ts', '.tsx'],
   }),
   commonjs({
     include: 'node_modules/**',
