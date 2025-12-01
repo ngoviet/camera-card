@@ -1,4 +1,4 @@
-import { clamp } from '../../../utils/native-helpers';
+import { clamp } from '../../../utils/native-helpers.js';
 import {
   PartialZoomSettings,
   ZOOM_DEFAULT_PAN_X,

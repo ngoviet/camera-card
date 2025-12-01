@@ -1,6 +1,6 @@
 import { add, endOfHour, format, fromUnixTime, startOfHour } from 'date-fns';
 import { isEqual, orderBy, throttle } from 'lodash-es';
-import { uniqWith } from '../../utils/native-helpers';
+import { uniqWith } from '../../utils/native-helpers.js';
 import { StateWatcherSubscriptionInterface } from '../../card-controller/hass/state-watcher';
 import { CameraConfig } from '../../config/schema/cameras';
 import { getEntityTitle } from '../../ha/get-entity-title';

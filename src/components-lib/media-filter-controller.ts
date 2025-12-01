@@ -12,7 +12,7 @@ import {
 } from 'date-fns';
 import { LitElement } from 'lit';
 import { isEqual, orderBy } from 'lodash-es';
-import { uniqWith } from '../../utils/native-helpers';
+import { uniqWith } from '../../utils/native-helpers.js';
 import { CameraManager } from '../camera-manager/manager';
 import { DateRange, PartialDateRange } from '../camera-manager/range';
 import { CameraQuery, MediaMetadata, QueryType } from '../camera-manager/types';
