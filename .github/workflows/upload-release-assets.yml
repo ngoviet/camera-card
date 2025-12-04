@@ -22,7 +22,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.event.inputs.tag || github.event.release.tag_name || 'main' }}
 
       - name: Setup Node and Yarn
         uses: volta-cli/action@v4
